@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    ```
+    <div class="container">
+
+        <h1>Event Booking System</h1>
+
+        <!-- Events -->
+        <section>
+            <h2>Available Events</h2>
+            <div id="events" class="grid"></div>
+        </section>
+
+        <!-- Register -->
+        <section>
+            <h2>Register</h2>
+
+            <input id="name" placeholder="Full Name">
+            <input id="email" placeholder="Email">
+
+            <button onclick="registerUser()">Register</button>
+
+            <p id="registeredUser"></p>
+        </section>
+
+        <!-- Booking -->
+        <section>
+            <h2>Book Event</h2>
+
+            <p id="selectedEvent">No event selected</p>
+
+            <input id="qty" type="number" placeholder="Number of Tickets">
+
+            <button onclick="bookEvent()">Confirm Booking</button>
+        </section>
+
+        <!-- History -->
+        <section>
+            <h2>My Bookings</h2>
+
+            <input id="searchEmail" placeholder="Enter Email">
+
+            <button onclick="loadBookings()">View Bookings</button>
+
+            <div id="bookings"></div>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+    ```
+
+</body>
+
+</html>
