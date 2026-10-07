@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub | Book Event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">EventHub</h2>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="booking.html" class="active">Book</a>
+                <a href="bookings.html">Bookings</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Book Your Event</h1>
+            <p>Select an event and reserve your tickets.</p>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <div class="booking-layout">
+
+            <!-- Event List -->
+            <div>
+                <h2>Choose Event</h2>
+                <div id="events" class="grid"></div>
+            </div>
+
+            <!-- Booking Panel -->
+            <div class="booking-panel">
+
+                <h2>Booking Summary</h2>
+
+                <div class="selected-box">
+                    <p>Selected Event</p>
+                    <h3 id="selectedEvent">None</h3>
+                </div>
+
+                <label>Tickets</label>
+                <input id="qty" type="number" min="1" placeholder="Enter quantity">
+
+                <button onclick="bookEvent()">
+        Confirm Booking
+      </button>
+
+                <p id="bookError" class="error"></p>
+                <p id="bookSuccess" class="success"></p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EventHub</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,66 +1,146 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Booking System</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventHub | Home</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    ```
-    <div class="container">
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">EventHub</h2>
 
-        <h1>Event Booking System</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="booking.html">Book</a>
+                <a href="bookings.html">Bookings</a>
+            </nav>
+        </div>
+    </header>
 
-        <!-- Events -->
-        <section>
-            <h2>Available Events</h2>
-            <div id="events" class="grid"></div>
-        </section>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Amazing Events</h1>
 
-        <!-- Register -->
-        <section>
-            <h2>Register</h2>
+            <p>
+                Book conferences, workshops and tech events with Cloudflare Workers + D1.
+            </p>
 
-            <input id="name" placeholder="Full Name">
-            <input id="email" placeholder="Email">
+            <a href="events.html" class="btn">
+        Explore Events
+      </a>
+        </div>
+    </section>
 
-            <button onclick="registerUser()">Register</button>
+    <!-- Stats -->
+    <section class="stats container">
 
-            <p id="registeredUser"></p>
-        </section>
+        <div class="stat-card">
+            <h2>12+</h2>
+            <p>Events</p>
+        </div>
 
-        <!-- Booking -->
-        <section>
-            <h2>Book Event</h2>
+        <div class="stat-card">
+            <h2>500+</h2>
+            <p>Bookings</p>
+        </div>
 
-            <p id="selectedEvent">No event selected</p>
+        <div class="stat-card">
+            <h2>5</h2>
+            <p>Cities</p>
+        </div>
 
-            <input id="qty" type="number" placeholder="Number of Tickets">
+        <div class="stat-card">
+            <h2>24/7</h2>
+            <p>Online</p>
+        </div>
 
-            <button onclick="bookEvent()">Confirm Booking</button>
-        </section>
+    </section>
 
-        <!-- History -->
-        <section>
-            <h2>My Bookings</h2>
+    <!-- Categories -->
+    <section class="container">
 
-            <input id="searchEmail" placeholder="Enter Email">
+        <h2 class="section-title">Categories</h2>
 
-            <button onclick="loadBookings()">View Bookings</button>
+        <div class="categories">
 
-            <div id="bookings"></div>
+            <div class="category">
+                🎵
+                <span>Music</span>
+            </div>
 
-        </section>
+            <div class="category">
+                💻
+                <span>Tech</span>
+            </div>
 
-    </div>
+            <div class="category">
+                🏆
+                <span>Sports</span>
+            </div>
+
+            <div class="category">
+                🎓
+                <span>Workshop</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Featured Events -->
+    <section class="container">
+
+        <div class="section-header">
+            <h2>Featured Events</h2>
+
+            <a href="events.html">View All →</a>
+        </div>
+
+        <!-- Loaded from API -->
+        <div id="events" class="grid"></div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about">
+
+        <div class="container about-grid">
+
+            <div>
+                <h2>Why EventHub?</h2>
+
+                <p>
+                    A simple event booking platform built using Cloudflare Workers, D1 Database and modern web technologies.
+                </p>
+            </div>
+
+            <div class="features">
+                <div>✓ Fast Booking</div>
+                <div>✓ Secure API</div>
+                <div>✓ Rate Limited</div>
+                <div>✓ Cloudflare Powered</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 EventHub</p>
+        <span>Built with Cloudflare Workers & D1</span>
+    </footer>
 
     <script src="app.js"></script>
-    ```
 
 </body>
 

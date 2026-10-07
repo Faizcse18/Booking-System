@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub | Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">EventHub</h2>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="events.html" class="active">Events</a>
+                <a href="register.html">Register</a>
+                <a href="booking.html">Book</a>
+                <a href="bookings.html">Bookings</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Upcoming Events</h1>
+            <p>Choose your next conference, workshop or tech event.</p>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <main class="container">
+
+        <div class="section-header">
+            <h2>Available Events</h2>
+            <span id="eventCount"></span>
+        </div>
+
+        <!-- Loaded automatically from API -->
+        <div id="events" class="grid"></div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 EventHub</p>
+        <span>Cloudflare Workers • D1 Database</span>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

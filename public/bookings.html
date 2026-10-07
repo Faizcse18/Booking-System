@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub | My Bookings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">EventHub</h2>
+
+            ```
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="booking.html">Book</a>
+                <a href="bookings.html" class="active">Bookings</a>
+            </nav>
+            ```
+
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>My Bookings</h1>
+            <p>View your event reservations and ticket details.</p>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <div class="search-card">
+
+            ```
+            <h2>Find Your Bookings</h2>
+
+            <p>
+                Enter the email address used during registration.
+            </p>
+
+            <div class="search-row">
+                <input id="searchEmail" type="email" placeholder="Enter your email">
+
+                <button onclick="loadBookings()">
+    View Bookings
+  </button>
+            </div>
+
+            <p id="bookingError" class="error"></p>
+            ```
+
+        </div>
+
+        <div class="booking-header">
+            <h2>Your Reservations</h2>
+            <span id="bookingCount"></span>
+        </div>
+
+        <div id="bookings" class="booking-list"></div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EventHub</p>
+        <span>Cloudflare Workers • D1 Database</span>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -12,10 +12,10 @@ export default {
             request.headers.get("CF-Connecting-IP") || "local";
 
         // =========================
-        // GET /events
+        // GET /api/events
         // 60 requests per minute
         // =========================
-        if (request.method === "GET" && url.pathname === "/events") {
+        if (request.method === "GET" && url.pathname === "/api/events") {
 
             const { success } = await env.EVENTS_RATE_LIMIT.limit({
                 key: clientIp
@@ -35,10 +35,10 @@ export default {
         }
 
         // =========================
-        // POST /users
+        // POST /api/users
         // 5 requests per minute
         // =========================
-        if (request.method === "POST" && url.pathname === "/users") {
+        if (request.method === "POST" && url.pathname === "/api/users") {
 
             const { success } = await env.USERS_RATE_LIMIT.limit({
                 key: clientIp
@@ -67,10 +67,10 @@ export default {
         }
 
         // =========================
-        // POST /book
+        // POST /api/book
         // 10 requests per minute
         // =========================
-        if (request.method === "POST" && url.pathname === "/book") {
+        if (request.method === "POST" && url.pathname === "/api/book") {
 
             const { success } = await env.BOOK_RATE_LIMIT.limit({
                 key: clientIp
@@ -125,12 +125,12 @@ export default {
         }
 
         // =========================
-        // GET /bookings/:email
+        // GET /api/bookings/:email
         // 20 requests per minute
         // =========================
         if (
             request.method === "GET" &&
-            url.pathname.startsWith("/bookings/")
+            url.pathname.startsWith("/api/bookings/")
         ) {
 
             const { success } = await env.BOOKINGS_RATE_LIMIT.limit({
@@ -144,7 +144,7 @@ export default {
             }
 
             const email = decodeURIComponent(
-                url.pathname.split("/")[2]
+                url.pathname.split("/")[3]
             );
 
             const result = await env.booking_db
